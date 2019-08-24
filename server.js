@@ -1,30 +1,16 @@
-var express = require("express");
-var app = express();
-var PORT = process.env.PORT || 8080;
+//Install express server
+const express = require('express');
+const path = require('path');
 
-app.use(express.static(__dirname + "/public"));
+const app = express();
 
-app.get("/:date",function(req,res){
-var input = decodeURI(req.params.date);
-var isNumber = /^\d+$/.test(input);
-var unix, string;
-if(isNumber){
-var t = new Date(parseInt(input));
-string = t.toUTCString();
-unix = input;
-} else {
-unix = Date.parse(input) || null;
-string= Date.parse(input) ? input : null;
-}
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/Calories'));
 
-var output = {
-string: string,
-unix:unix,
-};
-
-res.json(output)
+app.get('/*', function(req,res) {
+    
+res.sendFile(path.join(__dirname+'/dist/Calories/index.html'));
 });
 
-app.listen(PORT,function(){
-console.log('server successfully started on port '+PORT);
-});
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
