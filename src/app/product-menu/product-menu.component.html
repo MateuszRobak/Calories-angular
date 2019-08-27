@@ -1,13 +1,23 @@
-<nav>
-        <ul class="nav nav-pills nav-stacked">
-            <li class="text-center nav-item"><a class="nav-link" href="#" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Home</a></li>
-                <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                </div>
-                </div>
-            <li class="text-center"><a href="#">About</a></li>
-            <li class="text-center"><a href="#">Contact</a></li>
-        </ul>
+<nav class="navbar navbar-light bg-light">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" href="#collapseFruits" role="button" aria-expanded="false" aria-controls="collapseFruits">Fruits</a>
+        </li>
+        <div class="collapse" id="collapseFruits">
+            <div>
+                <ul class="list-group">
+                    <app-product-item></app-product-item>
+                </ul>
+            </div>
+        </div>
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="collapse" href="#collapseVegetables" role="button" aria-expanded="false" aria-controls="collapseVegetables">Vegetables</a>
+        </li>
+        <div class="collapse" id="collapseVegetables">
+            <div>
+                <p>TOMATO</p>
+                <p>POTATO</p>
+            </div>
+        </div>
+    </ul>
 </nav>
-

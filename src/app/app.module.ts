@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +7,7 @@ import { FormsModule} from '@angular/forms'
 import { CaloriesComponent } from './calories/calories.component';
 import { ProductMenu } from './product-menu/product-menu.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ProductItem } from './product-menu/product-item/product-item.component';
 
 
 
@@ -14,16 +15,16 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     AppComponent,
     CaloriesComponent,
-    ProductMenu
+    ProductMenu,
+    ProductItem
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
-    
-    
+    NgbModule  
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

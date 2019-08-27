@@ -1,0 +1,33 @@
+nav {
+    padding-top: 50px;
+    text-align: center
+}
+
+li.nav-item {
+    background: #F8F8FF
+}
+
+.list-group {
+    margin: 0;
+    padding: 0
+}
+
+nav ul li a.nav-link {
+    color: #000;
+    padding: 10;
+    margin: 0;
+    border: 1px solid #E3D8CA
+}
+
+nav ul li a:hover {
+    background-color: #FCF0E1
+}
+
+nav ul li a:focus {
+    background-color: #F8F8FF
+}
+
+.card {
+    background-color: #FEFEFE;
+    border: 1px solid #dfd8d6;
+}
