@@ -20,11 +20,11 @@ export class CaloriesComponent{
         return false;
     }
 
-    showCountedproducts(index){                       
-        this.products[index].counted = this.countproducts(index)   
+    showCountedCalories(index){                       
+        this.products[index].counted = this.countCalories(index)   
     }
 
-    countproducts(index){
+    countCalories(index){
         return this.products[index].userInput * this.products[index].calories
     }
 
