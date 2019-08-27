@@ -5,17 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule} from '@angular/forms'
 import { CaloriesComponent } from './calories/calories.component';
+import { ProductMenu } from './product-menu/product-menu.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CaloriesComponent
+    CaloriesComponent,
+    ProductMenu
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
