@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../models/product.model'
 
 @Component({
@@ -7,10 +7,6 @@ import { Product } from '../../models/product.model'
     styleUrls: ["./product-item.component.css"] 
 })
 export class ProductItem{
-    fruits: Product[] = [
-        new Product(0,"Apple", 0, 0.52,0),
-        new Product(1, "Banana", 0, 0.88,0),        
-        new Product(2, "Orange", 0, 0.47,0),
-    ]   
+    @Input() product: Product;
 }
 

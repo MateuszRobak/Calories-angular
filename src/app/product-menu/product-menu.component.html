@@ -6,7 +6,9 @@
         <div class="collapse" id="collapseFruits">
             <div>
                 <ul class="list-group">
-                    <app-product-item></app-product-item>
+                    <li class="text-center list-group-item" *ngFor="let product of fruits">
+                        <app-product-item [product]=product></app-product-item>
+                    </li>
                 </ul>
             </div>
         </div>
