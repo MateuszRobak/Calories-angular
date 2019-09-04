@@ -9,9 +9,9 @@ import { isEmptyExpression } from '@angular/compiler';
 export class CaloriesComponent{    
 
     products: Product[] = [
-        new Product(0,"Apple", 0, 0.52,0),
-        new Product(1, "Banana", 0, 0.88,0),        
-        new Product(2, "Orange", 0, 0.47,0),        
+        // new Product(0,"Apple", 0, 0.52,0),
+        // new Product(1, "Banana", 0, 0.88,0),        
+        // new Product(2, "Orange", 0, 0.47,0),        
     ] 
 
     isEmpty(index){
