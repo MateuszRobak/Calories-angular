@@ -8,5 +8,6 @@ import { Product } from '../../models/product.model'
 })
 export class ProductItem{
     @Input() product: Product;
+    // product: test;
 }
 
