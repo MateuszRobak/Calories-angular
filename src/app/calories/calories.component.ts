@@ -10,10 +10,6 @@ import { isEmptyExpression } from '@angular/compiler';
 })
 export class CaloriesComponent{    
 
-    /*
-    Let's assign the global state of selected products the component's product list.
-    When something changes in the global state, the HTML will be automatically rebuild (rerendered) with the new state of the object.
-    */
     products = selectedProducts;
 
     isEmpty(index){
