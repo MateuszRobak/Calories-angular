@@ -26,5 +26,9 @@ export class CaloriesComponent{
         return this.products[index].userInput * this.products[index].calories
     }
 
+    removeProduct(index){
+        selectedProducts.splice(index,1)
+    }
+
 
 }
