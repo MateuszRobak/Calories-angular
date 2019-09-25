@@ -24,12 +24,12 @@
                 <input name="userInput" type="number" class="form-control" [(ngModel)]="product.userInput">
             </td>
             <td>
-                <button [disabled]="isEmpty(product.id)" style="margin-left: 10px;" class="btn btn-success" (click)="showCountedCalories(product.id)">Count!                                
+                <button [disabled]="isEmpty(i)" style="margin-left: 10px;" class="btn btn-success" (click)="showCountedCalories(i)">Count!                                
                         </button>
             </td>
             <td>
-                <h5 class="text-center">{{product.counted.toFixed(2)}}</h5>
+                <h5 class="text-center">{{(product.userInput * product.calories).toFixed(2)}}</h5>
             </td>
-        </tr>
+        </tr>{{product.counted.toFixed(2)}}
     </tbody>
 </table>
