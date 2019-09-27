@@ -21,15 +21,33 @@
                 <h5 class="text-center">{{product.name}}</h5>
             </td>
             <td class="col-sm-3">
-                <input name="userInput" type="number" class="form-control" [(ngModel)]="product.userInput">
+                <input 
+                    name="userInput" 
+                    type="text"
+                    oninput="validity.valid||(value='');"
+                    pattern="^(0|[1-9]\d*)(\.\d*)?"
+                    class="form-control" 
+                    [(ngModel)]="product.userInput">
             </td>
             <td class="col-sm-3">
                 <button style="margin-left: 10px;" class="btn btn-danger" (click)="removeProduct(i)">Remove                                
                         </button>
             </td>
             <td class="col-sm-3">
-                <h5 class="text-center">{{(product.userInput * product.calories).toFixed(2)}}</h5>
+                <h5 class="text-center">{{showCountedCalories(i)}}</h5>
             </td>
         </tr>
     </tbody>
+
+    <tfoot>
+        <tr>
+            <td class="col-sm-3"></td>
+            <td class="col-sm-3"></td>
+            <td class="col-sm-3"></td>
+            <td class="col-sm-3">
+                <h5 class="text-center" 
+                *ngIf="isProductsLenghtHigherThanOne()"><b>Total </b>{{showCountedCaloriesForAllProducts()}}</h5>
+            </td>            
+        </tr>
+    </tfoot>
 </table>
