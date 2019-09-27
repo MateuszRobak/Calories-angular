@@ -39,7 +39,7 @@ export class CaloriesComponent{
     }
 
     isProductsLenghtHigherThanOne(){
-      if(this.products.length > 1) return true;  
+      if(this.products.length > 0) return true;  
     }
 
 
