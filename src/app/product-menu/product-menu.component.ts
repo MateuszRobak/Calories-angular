@@ -8,9 +8,9 @@ import { Product } from '../models/product.model'
 })
 export class ProductMenu{
     fruits: Product[] = [
-        new Product(0,"Apple", 0, 0.52,0),
-        new Product(1, "Banana", 0, 0.88,0),        
-        new Product(2, "Orange", 0, 0.47,0),
+        new Product(0,"Apple", null, 0.52,0),
+        new Product(1, "Banana", null, 0.88,0),        
+        new Product(2, "Orange", null, 0.47,0),
     ]  
 }
 
