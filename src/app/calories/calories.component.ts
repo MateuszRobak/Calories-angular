@@ -27,7 +27,7 @@ export class CaloriesComponent{
     }
 
     removeProduct(index){
-        this.products[index].userInput = 0;
+        this.products[index].userInput = null;
         selectedProducts.splice(index,1)
     }
 
