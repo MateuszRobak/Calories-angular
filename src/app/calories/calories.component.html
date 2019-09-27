@@ -24,9 +24,10 @@
                 <input 
                     name="userInput" 
                     type="text"
-                    oninput="validity.valid ? this.save = value : value = this.save"
+                    oninput="validity.valid ? this.save = value : value = (this.save || '')"                 
                     pattern="^(0|[1-9]\d*)(\.\d*)?"
                     class="form-control" 
+                    ng-reflect-model=""
                     [(ngModel)]="product.userInput">
             </td>
             <td class="col-sm-3">
@@ -46,7 +47,7 @@
             <td class="col-sm-3"></td>
             <td class="col-sm-3">
                 <h5 class="text-center" 
-                *ngIf="isProductsLenghtHigherThanOne()"><b>Total </b>{{showCountedCaloriesForAllProducts()}}</h5>
+                *ngIf="isProductsLenghtHigherThanOne()"><b>Total: </b>{{showCountedCaloriesForAllProducts()}}</h5>
             </td>            
         </tr>
     </tfoot>
