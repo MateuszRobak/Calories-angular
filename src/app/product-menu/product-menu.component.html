@@ -1,24 +1,40 @@
 <nav class="navbar navbar-light bg-light">
     <ul class="nav nav-pills nav-stacked">
         <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="collapse" href="#collapseFruits" role="button" aria-expanded="false" aria-controls="collapseFruits">Fruits</a>
+            <a class="nav-link" href="#" data-toggle="collapse" href="#collapseFruits" role="button" aria-expanded="false" aria-controls="collapseFruits">Owoce</a>
         </li>
         <div class="collapse" id="collapseFruits">
             <div>
                 <ul class="list-group">
-                    <li class="text-center list-group-item" *ngFor="let product of fruits">
+                    <li class="list-group-item" *ngFor="let product of fruits">
                         <app-product-item [product]=product></app-product-item>
                     </li>
                 </ul>
             </div>
         </div>
-        <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="collapse" href="#collapseVegetables" role="button" aria-expanded="false" aria-controls="collapseVegetables">Vegetables</a>
+        <li class="nav-item" style="padding-top: 10px">
+            <a class="nav-link" href="#" data-toggle="collapse" href="#collapseVegetables" role="button" aria-expanded="false" aria-controls="collapseVegetables">Warzywa</a>
         </li>
         <div class="collapse" id="collapseVegetables">
             <div>
-                <p>TOMATO</p>
-                <p>POTATO</p>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let product of vegetables">
+                        <app-product-item [product]=product></app-product-item>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <li class="nav-item" style="padding-top: 10px">
+            <a class="nav-link" href="#" data-toggle="collapse" href="#collapseDairy" role="button" aria-expanded="false" aria-controls="collapseDairy">Reszta</a>
+        </li>
+        <div class="collapse" id="collapseDairy">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let product of dairy">
+                        <app-product-item [product]=product></app-product-item>
+                    </li>
+                </ul>
             </div>
         </div>
     </ul>

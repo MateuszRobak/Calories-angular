@@ -1,14 +1,14 @@
 <div class="row">
-    <div class="text-center col-xs-6">
-        <h5 class="text-center">{{product.name}}</h5>
+    <div class="col-xs-8">
+        <h5>{{product.name}}</h5>
     </div>
-    <div class="text-center col-xs-6">
-        <h5 class="text-center">
-            <!--
-            Here we call the function from .ts file.
-            The Product instance linked to this button is passed to the function
-            -->
-            <a class="btn-success" href="#" role="button" (click)="addSelectedProduct(product)">+</a>
-        </h5>
+    <div class="col-xs-4">
+            
+          <h5>
+            <a class="btn-success" href="#" (click)="addSelectedProduct(product)">+</a>
+          </h5>
+            
+            
+        
     </div>
 </div>
