@@ -1,8 +1,8 @@
 export class Product{
     constructor(
-        public id, 
+        // public id, 
         public name: string, 
-        public userInput, 
+        public userInput: number, 
         public calories, 
         public counted
         ){}

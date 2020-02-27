@@ -19,7 +19,7 @@ export class CaloriesComponent{
     }
 
     showCountedCalories(index){                       
-        this.products[index].counted = this.countCalories(index)   
+        return (this.products[index].counted = this.countCalories(index)).toFixed(2)
     }
 
     countCalories(index){
@@ -27,7 +27,19 @@ export class CaloriesComponent{
     }
 
     removeProduct(index){
+        this.products[index].userInput = null;
         selectedProducts.splice(index,1)
+    }
+
+    showCountedCaloriesForAllProducts(){
+        var value = 0;
+        for(let i in selectedProducts){
+            value += selectedProducts[i].counted
+        } return value.toFixed(2)
+    }
+
+    isProductsLenghtHigherThanOne(){
+      if(this.products.length > 0) return true;  
     }
 
 

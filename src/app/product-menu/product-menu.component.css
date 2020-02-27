@@ -1,10 +1,12 @@
 nav {
     padding-top: 50px;
-    text-align: center
+    text-align: center;
+    width: 250px;
 }
 
 li.nav-item {
-    background: #F8F8FF
+    background: #F8F8FF;
+
 }
 
 .list-group {
@@ -17,6 +19,7 @@ nav ul li a.nav-link {
     padding: 10;
     margin: 0;
     border: 1px solid #E3D8CA
+    
 }
 
 nav ul li a:hover {
